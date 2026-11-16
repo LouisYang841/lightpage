@@ -1,0 +1,16 @@
+**/.tools/
+**/out/
+**/signing/
+**/signing-backup/
+*.jks
+*.keystore
+*.apk
+*.aab
+*.idsig
+local.properties
+.env
+.env.*
+!.env.example
+
+# 本地交接笔记，不随仓库发布
+HANDOFF.md
