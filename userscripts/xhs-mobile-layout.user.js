@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name 小红书：固定双列与紧凑底部导航
 // @namespace local.xhs.layout
-// @version 0.1.0
+// @version 0.2.0
 // @description 双列内容居中显示，启用原站底栏并移除过大的底部留白。实验版。
 // @match https://www.xiaohongshu.com/*
 // @match https://www.rednote.com/*
@@ -137,7 +137,7 @@
   // Disabling the script and reopening the Lite App completely removes the patch.
   // This helper is useful when debugging from a connected browser console.
   window.__xhsCompactLayout = {
-    version: '0.1.0', widthPatched,
+    version: '0.2.0', widthPatched,
     restore() {
       observer.disconnect();
       if (widthPatched) {
