@@ -33,7 +33,10 @@ jobs:
           LIGHTPAGE_KEYSTORE_PASS: ${{ secrets.LIGHTPAGE_KEYSTORE_PASS }}
         run: bash android/build.sh
 
+      # Artifacts are downloadable by any GitHub account, so they are only
+      # published when the owner explicitly starts the workflow.
       - uses: actions/upload-artifact@v4
+        if: ${{ github.event_name == 'workflow_dispatch' }}
         with:
           name: lightpage-0.2.0-test-apk
           path: android/out/lightpage-0.2.0-test.apk

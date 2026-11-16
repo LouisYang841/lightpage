@@ -29,11 +29,12 @@
 
 | 项目 | 状态 |
 | --- | --- |
-| Java 编译、D8、aapt2 链接、zipalign | 已通过（Linux x86_64 构建链） |
-| v2/v3 签名与 Manifest 校验 | 已通过 |
+| Java 编译、D8、aapt2 链接、zipalign | GitHub Actions 上通过（Linux x86_64 构建链） |
+| v2/v3 签名与 Manifest 校验 | 已通过（artifacts 里的 APK 含 v2 签名块） |
 | 布局脚本：宽度夹取、样式注入、重入、观察器合并、restore 还原 | jsdom 离线测试通过 |
 | 历史包装：底栏 replace、position 保留、笔记 push | jsdom 离线测试通过 |
 | 返回判定：exit / home / back / 弹层 / 输入框 | jsdom 离线测试通过 |
+| APK 内容：`assets/` 下三个脚本齐全 | 已通过（核对过 CI 产物的 APK 条目） |
 | 真机：登录、覆盖升级、双列、底部空白、返回、弹层、视频、软键盘 | **未验证** |
 | 第三方登录、下载、拍摄、推送 | **未验证** |
 
